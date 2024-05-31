@@ -1,0 +1,17 @@
+<div class="py-8 row">
+	<div class="card" style="width:18rem">
+		<img class="card-img-top" alt="Card image cap" src="{{ doc.image }}"/>
+		<div class="row">
+			<div class="card-body">
+				<p class="card-title">{{ doc.item_name }}</p>
+				<p class="card-text">{{ doc.description }}</p>
+				<p class="card-text">Price: {{ doc.price }}</p>
+				<a href="{{ doc.route }}" class="btn btn-success">View Details</a>
+			</div>
+		</div>	
+	</div>
+</div>
+<!-- <div>
+	<a href="{{ doc.route }}">{{ doc.title or doc.name }}</a>
+</div> -->
+<!-- this is a sample default list template -->

@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OR.###",
+ "creation": "2024-05-31 10:10:35.818173",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "order_details_section",
+  "order_datetime",
+  "order_number",
+  "order_items",
+  "is_delivery",
+  "table_number",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_details_section",
+   "fieldtype": "Section Break",
+   "label": "Order Details"
+  },
+  {
+   "fieldname": "order_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Order Date/Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Order Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_items",
+   "fieldtype": "Table",
+   "in_standard_filter": 1,
+   "label": "Order Items",
+   "options": "Order Item",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_delivery",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Delivery?",
+   "reqd": 1
+  },
+  {
+   "depends_on": "\"depends_on: eval:doc.is_delivery == 0\"",
+   "fieldname": "table_number",
+   "fieldtype": "Link",
+   "label": "Table Number",
+   "options": "Table"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-31 10:56:56.783434",
+ "modified_by": "Administrator",
+ "module": "Classic Cuisine",
+ "name": "Order",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
