@@ -4,4 +4,4 @@ This is a simple Restaurant Management System.
 
 #### License
 
-mit
+mit# Classic-Cuisine
